@@ -1,8 +1,8 @@
-import {Injectable} from "@angular/core";
-import {Http, Response} from "@angular/http";
-import {Observable} from "rxjs/Observable";
+import {Injectable} from '@angular/core';
+import {Http, Response, Headers} from '@angular/http';
+import {Observable} from 'rxjs/Observable';
 import 'rxjs/Rx';
-import {Employee} from "./employee";
+import {Employee} from './employee';
 
 @Injectable()
 export class EmployeeService {
@@ -15,6 +15,12 @@ export class EmployeeService {
     return this.http.get(this._employeeUrl)
       .map(data => <Employee[]> data.json())
       .catch(this.hendleError);
+  }
+
+  addEmployee(employee: Employee) {
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post(this._employeeUrl, employee, headers).catch(this.hendleError);
   }
 
   private hendleError(error: Response) {

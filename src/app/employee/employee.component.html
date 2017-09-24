@@ -1,0 +1,11 @@
+<h2>Here is the list of employees </h2>
+<input type="text" placeholder="Enter new employee name" (keyup.enter)="addEmployee(newEmployeeName.value)"  #newEmployeeName>
+
+  <button type="submit" (click) = "addEmployee(newEmployeeName.value)">Add</button>
+
+<ul>
+  <li *ngFor="let employee of employees">
+    {{ employee.name }}
+
+  </li>
+</ul>
