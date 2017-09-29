@@ -12,5 +12,4 @@ import {EmployeeService} from './employee/employee.service';
 })
 
 export class AppComponent {
-  title = 'WildFly Swarm & Angular app';
 }

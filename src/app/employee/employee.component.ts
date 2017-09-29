@@ -6,8 +6,7 @@ import {HelloService} from '../hello.service';
 @Component({
   selector: 'app-employee',
   templateUrl: './employee.component.html',
-  styleUrls: ['./employee.component.css'],
-  providers: [HelloService, EmployeeService]
+  styleUrls: ['./employee.component.css']
 })
 
 

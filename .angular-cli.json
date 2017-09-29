@@ -48,6 +48,12 @@
       "exclude": "**/node_modules/**"
     }
   ],
+  "scripts":[
+    "../node_modules/toastr/build/toastr.min.js"
+  ],
+  "styles":[
+    "../node_modules/toastr/build/toastr.min.css"
+  ],
   "test": {
     "karma": {
       "config": "./karma.conf.js"

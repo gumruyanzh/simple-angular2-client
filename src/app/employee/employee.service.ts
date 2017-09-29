@@ -9,7 +9,7 @@ export class EmployeeService {
   constructor(private http: Http) {
   }
 
-  private _employeeUrl = 'http://localhost:8080/employee';
+  private _employeeUrl = 'http://localhost:8080/api/employee';
 
   getAllEmployees() {
     return this.http.get(this._employeeUrl)
